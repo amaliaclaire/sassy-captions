@@ -3,31 +3,16 @@
 
 <h1>{{ heading }}</h1>
 <table class="table">
-  <thead>
-    <tr>
-      <th>Caption</th>
-      <th>Category</th>
-      <th>Author</th>
-      <th>Popularity</th>
-      <th>Background</th>
-      <th></th>
-    </tr>
-  </thead>
   <tbody>
     {{#each quote_table}}
     <tr>
-      <td><a href="/quotes_table/{{id}}">{{caption}}</a></td>
-      <td>{{category}}</td>
-      <td>{{author}}</td>
-      <td>{{popularity}}</td>
-      <td>{{background}}</td>
-      <td>edit</td>
-      <td>
-
-
+      <p><a{{id}}> Quote: {{caption}}</a></p>
+      <p>Category: {{category}}</p>
+      <p>Author: {{author}}</p>
+      <p>popularity: {{popularity}}</p>
+      <p>background: {{background}}</p>
+        <br>
     </tr>
-
-
     {{/each}}
   </tbody>
 </table>
