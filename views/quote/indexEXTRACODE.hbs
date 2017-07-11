@@ -1,0 +1,20 @@
+<h1>{{title}}</h1>
+<a href='/'> back to homepage</a>
+
+<h1>{{ heading }}</h1>
+<table class="table">
+  <tbody>
+    {{#each quote_table}}
+    <tr>
+      <p id="quote-id"><a{{id}}> Quote: {{caption}}</a></p>
+      <p>Category:{{category}}</p>
+      <p>Author: {{author}}</p>
+      <p>popularity: {{popularity}}</p>
+      <p>background: {{background}}</p>
+        <br>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+<br>
+<a href="/">Return to home page</a>
