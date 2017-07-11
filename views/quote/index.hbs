@@ -1,0 +1,53 @@
+<h1>{{title}}</h1>
+<a href='/'> back to homepage</a>
+
+<h1>{{ heading }}</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Caption</th>
+      <th>Category</th>
+      <th>Author</th>
+      <th>Popularity</th>
+      <th>Background</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each quote_table}}
+    <tr>
+      <td><a href="/quotes_table/{{id}}">{{caption}}</a></td>
+      <td>{{category}}</td>
+      <td>{{author}}</td>
+      <td>{{popularity}}</td>
+      <td>{{background}}</td>
+      <td>edit</td>
+      <td>
+
+
+    </tr>
+
+
+    {{/each}}
+  </tbody>
+</table>
+<br>
+<a href="/">Return to home page</a>
+
+
+<!-- <form action="/quotes_table/{{this.id}}?_method=DELETE" method="POST">
+  <input class="btn btn-sm btn-danger"
+  type="submit"
+  name="delete"
+  value="Delete quote">
+
+</form>
+</td>
+<td>
+  <form action="/quotes_table/{{this.id}}/edits" method="PUT">
+    <input class="btn btn-sm btn-danger"
+    type="submit"
+    name="edit"
+    value="Edit quote">
+
+</form></td> -->

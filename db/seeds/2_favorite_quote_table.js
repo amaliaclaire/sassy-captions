@@ -5,8 +5,8 @@ exports.seed = (knex) => {
       return knex('favorite_quote_table').insert([
         {
           id: 1,
-          user_id: 1,
-          quote_id: 1
+          users_id: 1,
+          quotes_id: 1
         }
       ])
     }).then(() => {
