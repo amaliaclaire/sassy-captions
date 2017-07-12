@@ -9,6 +9,7 @@ var users = require('./routes/users');
 var favorite_quote = require('./routes/favorite_quote');
 var created_quote = require('./routes/created_quote');
 var quote = require('./routes/quote');
+var comments = require('./routes/comments')
 
 var app = express();
 
@@ -28,7 +29,8 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/favorite_quote', favorite_quote);
 app.use('/created_quote', created_quote);
-app.use('/quote', quote); 
+app.use('/quote', quote);
+app.use('/comments', comments);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
