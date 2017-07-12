@@ -1,0 +1,22 @@
+
+<!-- ANGULARIZE IT -->
+
+<div>
+  <h1 id="title-quotes">QUOTE PAGE</h1>
+
+  <main>
+    <a ng-repeat="quote in $ctrl.quotes" href="#" title="Post 1">
+      <article>
+        <p>{quote.caption}</p>
+        <figure>
+          <img src="https://placehold.it/480x360" alt="image-1">
+          <figcaption>{quote.author}</figcaption>
+          <p>{quote.category}</p>
+          <p>popularity:{quote.popularity}</p>
+          <textarea>Add Quote:</textarea>
+        </figure>
+      </article>
+    </a>
+  </main>
+
+</div>

@@ -24,13 +24,18 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'node_modules')));
 
-app.use('/', index);
-app.use('/users', users);
-app.use('/favorite_quote', favorite_quote);
-app.use('/created_quote', created_quote);
-app.use('/quote', quote);
-app.use('/comments', comments);
+app.use('/api/', index);
+app.use('/api/users', users);
+app.use('/api/favorite_quote', favorite_quote);
+app.use('/api/created_quote', created_quote);
+app.use('/api/quotes', quote);
+app.use('/api/comments', comments);
+
+app.use('*', function(req, res, next) {
+  res.sendFile('index.html', {root: path.join(__dirname, 'public')})
+})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

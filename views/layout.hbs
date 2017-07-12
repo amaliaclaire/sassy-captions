@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='quotes'>
   <head>
     <title>{{title}}</title>
+    <base href='/'>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link rel='stylesheet' href='/stylesheets/quote.css' /> 
+    <link rel='stylesheet' href='/stylesheets/quote.css' />
   </head>
   <body>
     {{{body}}}
+    <script src="/angular/angular.min.js"></script>
+    <script src="/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/app.module.js"></script>
+    <script src="/app.config.js"></script>
+
+
   </body>
 </html>

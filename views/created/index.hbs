@@ -1,1 +1,93 @@
 <h1>CREATED QUOTES IS HERE</h1>
+
+
+<div id="app-6">
+<p>${ message }</p>
+<input v-model="message">
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.1/pixi.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js"></script>
+  <script type="text/javascript">
+  var message = "hello"
+    var app6 = new Vue({
+      el: '#app-6',
+      delimiters:['${', '}'],
+      data: {
+      message: message
+    }
+  })
+  var app = new PIXI.Application(400, 300, {backgroundColor: 0x1099bb});
+  document.body.appendChild(app.view);
+
+  var basicText = new PIXI.Text(message);
+  basicText.x = 30;
+  basicText.y = 90;
+
+  app.stage.addChild(basicText);
+
+  var style = new PIXI.TextStyle({
+      fontFamily: 'Arial',
+      fontSize: 36,
+      fontStyle: 'italic',
+      fontWeight: 'bold',
+      fill: ['#ffffff', '#00ff99'], // gradient
+      stroke: '#4a1850',
+      strokeThickness: 5,
+      dropShadow: true,
+      dropShadowColor: '#000000',
+      dropShadowBlur: 4,
+      dropShadowAngle: Math.PI / 6,
+      dropShadowDistance: 6,
+      wordWrap: true,
+      wordWrapWidth: 440
+  });
+
+  var richText = new PIXI.Text('goodbye meows', style);
+  richText.x = 30;
+  richText.y = 180;
+
+  app.stage.addChild(richText);
+  </script>
+
+
+
+
+
+
+
+  <!-- <script type="text/javascript">
+
+var app = new PIXI.Application(800, 600, {backgroundColor: 0x1099bb});
+document.body.appendChild(app.view);
+
+var basicText = new PIXI.Text('do text');
+basicText.x = 30;
+basicText.y = 90;
+
+app.stage.addChild(basicText);
+
+var style = new PIXI.TextStyle({
+    fontFamily: 'Arial',
+    fontSize: 36,
+    fontStyle: 'italic',
+    fontWeight: 'bold',
+    fill: ['#ffffff', '#00ff99'], // gradient
+    stroke: '#4a1850',
+    strokeThickness: 5,
+    dropShadow: true,
+    dropShadowColor: '#000000',
+    dropShadowBlur: 4,
+    dropShadowAngle: Math.PI / 6,
+    dropShadowDistance: 6,
+    wordWrap: true,
+    wordWrapWidth: 440
+});
+
+var richText = new PIXI.Text('goodbye meows', style);
+richText.x = 30;
+richText.y = 180;
+
+app.stage.addChild(richText);
+
+  </script> -->

@@ -11,7 +11,7 @@ var db = require('../db')
 
 router.get('/', function(req, res, next){
   db('quote_table').then(quote_table => {
-    res.render('quote/index', {quote_table});
+    res.json(quote_table);
   })
 })
 
