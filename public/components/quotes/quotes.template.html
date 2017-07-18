@@ -16,9 +16,11 @@
           <p ng-click="$ctrl.upVote(quote)">⬆️</p>
           <p>{{quote.popularity}}</p>
           <p ng-click="$ctrl.downVote(quote)">⬇️</p>
+          <button class="btn" ngclipboard data-clipboard-text="{{quote.caption}}">Copy Quote</button>
 
           <button ng-click="$ctrl.setCommentDisplay(quote.id)">View Comments</button>
-          <comments comments="quote.comments"></comments>
+          TESTING {{quote.id}}
+          <comments quoteid="quote.id" comments="quote.comments"></comments>
           <p="$ctrl.showComments(id)"></p>
 
           <!-- child component we need to give the id from quote_table look at ng-repeat, need to link that ID to the child component so the child component can make it's own API request -->

@@ -4,7 +4,8 @@
     controller: controller,
     templateUrl: '/components/comments/comments.template.html',
     bindings: {
-      comments: '<'
+      comments: '<',
+      quoteid: '<'
     }
   })
 
@@ -13,11 +14,12 @@
     const vm = this;
 
     vm.$onInit = function () {
-      console.log(vm.commentId);
+      console.log('vm', vm);
+      console.log('quoteid', vm.quoteid);
       // $http.get('/api/quotes').then(function (response){
       //   console.log(response.data);
       //   vm.quotes = response.data
-      // })
+      // }) LOAD BACK INTO THE SERVER WITH CHARLIEEEEEEE
 
       vm.comments = []
       vm.newCommentContent = ''
@@ -28,17 +30,26 @@
       // }
     }
     vm.addComment = function (){
-      vm.comments.push(vm.newCommentContent)
 
-      vm.newCommentContent = '';
+      let commentUrl = '/api/comments/'
+      let newComment = {
+        content: vm.newCommentContent,
+        users_id: 1,
+        quote_table_id: vm.quoteid
 
-      // let commentUrl = '/api/comments/' + id + '/comments'
-      // // let commentsId = req.params.id
-      // // console.log(commentUrl)
-      // // console.log(vm.newComment);
-      // $http.post(commentUrl, id).then(res => {
-      //   console.log(res);
-      // })
+
+        // TODO: the users_id is HARD CODED
+      }
+
+
+      $http.post(commentUrl, newComment).then(res => {
+        vm.comments.push(vm.newCommentContent)
+
+        vm.newCommentContent = '';
+        // AND NOW POST CORRECT API
+        // /api/comments <-- something like that
+        console.log('res.data', res.data);
+      })
     }
   }
 

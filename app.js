@@ -31,7 +31,7 @@ app.use('/api/users', users);
 app.use('/api/favorite_quote', favorite_quote);
 app.use('/api/created_quote', created_quote);
 app.use('/api/quotes', quote);
-app.use('/api/comments', comments);
+app.use('/api', comments);
 
 app.use('*', function(req, res, next) {
   res.sendFile('index.html', {root: path.join(__dirname, 'public')})
