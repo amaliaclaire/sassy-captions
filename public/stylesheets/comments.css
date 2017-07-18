@@ -1,0 +1,20 @@
+.comments-section-div {
+  border: 1px solid black;
+  height: 95%;
+  width: 95%;
+  margin: 3%;
+  /*position: absolute;*/
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+  /*top: 100%;*/
+}
+
+/*.comments-section-div.selected {
+  top: 0%;
+}
+
+.generic-comments-styling{
+  margin: 5px 5px 5px 5px;
+  border: 0.5px solid black;
+}*/

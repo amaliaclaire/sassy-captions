@@ -1,0 +1,23 @@
+<div ng-class="comments-section-div">
+
+  <section>
+    <span>username:</span>
+    <textarea ng-model="$ctrl.newCommentContent"></textarea>
+    <button ng-click="$ctrl.addComment()">Submit</button>
+    <!-- <input ng-submit="$ctrl.newComment.content" class="form-control"></input> -->
+  </section>
+
+  <section>
+    <h5>All Comments</h5>
+    <!-- <p ng-model="$ctrl.addComment.content(id)"></p> -->
+    <br>
+
+    <section class="comments-container">
+      <section class="generic-comments-styling" ng-repeat="comment in $ctrl.comments">
+        <div>username</div>
+        <div>{{comment}}</div>
+      </section>
+    </section>
+  </section>
+
+</div>

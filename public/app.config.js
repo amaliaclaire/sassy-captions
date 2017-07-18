@@ -13,7 +13,7 @@
    $stateProvider
      .state('quotes', {
        name: 'quotePage',
-       url: '/',
+       url: '/quotes',
        component: 'quotes',
      })
  }
