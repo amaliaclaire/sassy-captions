@@ -26,7 +26,7 @@
     }
 
       vm.upVote = function (quoteId) {
-        console.log(quoteId.id);
+        console.log(quoteId);
         let upVoteUrl = '/api/quotes/' + quoteId.id + '/votes'
         $http.post(upVoteUrl).then(res => {
           $http.get('/api/quotes').then(res => {

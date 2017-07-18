@@ -11,7 +11,7 @@ var db = require('../db')
 
 router.get('/', function(req, res, next){
   let quotes = []
-  db('quote_table')
+  db('categories').innerJoin('quote_table', 'categories.id', 'quote_table.categories_id')
   .then(quote_table => {
     quotes = quote_table
     return Promise.all(quote_table.map((quote) => {
@@ -26,6 +26,25 @@ router.get('/', function(req, res, next){
     res.json(quotes)
   })
 })
+
+// PREVIOUS CODE FOR GET
+// router.get('/', function(req, res, next){
+//   let quotes = []
+//   db('quote_table')
+//   .then(quote_table => {
+//     quotes = quote_table
+//     return Promise.all(quote_table.map((quote) => {
+//       return db('comments').where('quote_table_id', quote.id)
+//     }))
+//   })
+//   .then((commentsArr) => {
+//     for (var i = 0; i < quotes.length; i++) {
+//       quotes[i].comments = commentsArr[i]
+//     }
+//
+//     res.json(quotes)
+//   })
+// })
 
 // Upvote and downVote
 
@@ -42,7 +61,7 @@ router.post('/:id/votes', (req, res, next) => {
 
 router.delete('/:id/votes', (req, res, next) => {
   db('quote_table')
-  
+
     .where({id: req.params.id})
     .update({popularity: db.raw('popularity - 1')})
     .returning('*')

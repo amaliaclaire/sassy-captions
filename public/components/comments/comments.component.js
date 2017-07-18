@@ -14,8 +14,8 @@
     const vm = this;
 
     vm.$onInit = function () {
-      console.log('vm', vm);
-      console.log('quoteid', vm.quoteid);
+      // console.log('vm', vm);
+      // console.log('quoteid', vm.quoteid);
       // $http.get('/api/quotes').then(function (response){
       //   console.log(response.data);
       //   vm.quotes = response.data

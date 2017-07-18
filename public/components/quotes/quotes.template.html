@@ -5,14 +5,24 @@
   <h1 id="title-quotes">QUOTE PAGE</h1>
 
   <main>
+    <select
+      ng-model="$ctrl.filterBy"
+      ng-init="$ctrl.filterBy = 'all-quotes'"
+    >
+      <option selected="selected" value="all-quotes">All Quotes</option>
+      <option value="Fun">Fun</option>
+      <option value="Family">Family</option>
+      <option value="Faith">Faith</option>
+      <option value="Friendship">Friendship</option>
+    </select>
     <a title="test" style="height: 380px; width:380px;"></a>
-    <a ng-repeat="quote in $ctrl.quotes | orderBy: 'popularity'" href="#" title="Post 1">
+    <a ng-repeat="quote in $ctrl.quotes | orderBy: 'popularity'" href="#" title="Post 1" ng-show="quote.name == $ctrl.filterBy || $ctrl.filterBy == 'all-quotes'">
       <article>
         <p>{{quote.caption}}</p>
         <figure>
           <img src="https://placehold.it/480x360" alt="image-1">
           <figcaption>{{quote.author}}</figcaption>
-          <p>{{quote.category}}</p>
+          <p>{{quote.name}}</p>
           <p ng-click="$ctrl.upVote(quote)">⬆️</p>
           <p>{{quote.popularity}}</p>
           <p ng-click="$ctrl.downVote(quote)">⬇️</p>
