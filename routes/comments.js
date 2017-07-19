@@ -4,14 +4,19 @@ const knex = require('../db')
 
 
 router.get(`/comments`, function(req, res, next) {
-  console.log('params', req.query);
-  knex('comments')
-  .where('quote_table_id', req.query.id)
-  .then(comments => res.json(comments))
-  .catch(err => {
-    console.log(err);
+  console.log('WE HERE DOG', req.query);
+  knex('comments').select('*').then(comments => {
+    res.json(comments)
+  }).catch(err => {
     next(err)
   })
+  // .select('quote_table_id', req.query.id)
+  //
+  // .then(comments => res.json(comments))
+  // .catch(err => {
+  //   console.log(err);
+  //   next(err)
+  // })
 });
 
 
@@ -19,14 +24,16 @@ router.get(`/comments`, function(req, res, next) {
 
 router.post('/comments', (req, res, next) => {
   let createComment = {
-    content: req.body.content
+    content: req.body.content,
+    users_id: req.body.users_id,
+    quote_table_id: req.body.quote_table_id
   }
-
-  knex('comments').insert(createComment, '*').then(newComment => {
+  knex('comments').insert(createComment).then(newComment => {
+    console.log('newComment', newComment);
     res.json({newComment: newComment})
   })
   .catch(err => {
-    debugger
+    console.log('err', err);
     next(err)
   })
 })
