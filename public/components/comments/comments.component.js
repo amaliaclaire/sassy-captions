@@ -24,7 +24,7 @@
       //  console.log('vm.quotes', vm.comme);
      })
 
-      // LOAD BACK INTO THE SERVER WITH CHARLIEEEEEEE
+
 
       vm.comments = []
       vm.newCommentContent = ''
@@ -55,14 +55,6 @@
         vm.newCommentContent = '';
         console.log('after push', vm.comments);
 
-
-
-      // $http.get('/api/comments/').then(res => {
-      //   vm.comments = res.data
-      // })
-
-
-      // do a get request in here & return --> then return it, you'll return a promise -- then you can do a .then() inside we have our data, then we can attach it to the model.
         console.log('res.data', res.data);
       })
     }

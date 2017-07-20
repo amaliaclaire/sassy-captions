@@ -11,7 +11,12 @@
    $locationProvider.html5Mode(true)
 
    $stateProvider
-     .state('quotes', {
+   .state({
+     name: 'landing',
+     url: '/',
+     component: 'landing',
+   })
+     .state( {
        name: 'quotePage',
        url: '/quotes',
        component: 'quotes',

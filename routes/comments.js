@@ -10,13 +10,7 @@ router.get(`/comments`, function(req, res, next) {
   }).catch(err => {
     next(err)
   })
-  // .select('quote_table_id', req.query.id)
-  //
-  // .then(comments => res.json(comments))
-  // .catch(err => {
-  //   console.log(err);
-  //   next(err)
-  // })
+
 });
 
 
@@ -37,20 +31,7 @@ router.post('/comments', (req, res, next) => {
     next(err)
   })
 })
-  // debugger
-  // knex('comments')
-  // .where({id: req.params.id})
-  // .update({content: knex.raw('content')})
-  // .returning('*')
-  // .then(comments => {
-  //   debugger
-  //   console.log('hi charlie', comments);
-  //   res.json({comments: comments})
-  // })
-  // .catch(err => {
-  //   debugger
-  //   next(err)
-  // })
+
 
 //  http://localhost:3000/comments?quote_table_id=2
 
