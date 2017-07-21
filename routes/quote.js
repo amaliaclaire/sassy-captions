@@ -60,8 +60,11 @@ router.post('/', (req, res, next) => {
 router.delete('/:id', (req, res, next) => {
   let id = req.params.id
 
-  db('quote_table').del().where({id}).then(() => {
-    res.redirect('/quotes')
+  db('quote_table').del().where({id}).then((deleted) => {
+    res.json(deleted)
+  }).catch(err => {
+    console.log('err', err)
+    next(err)
   })
 })
 

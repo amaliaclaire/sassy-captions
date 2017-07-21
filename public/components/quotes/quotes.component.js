@@ -29,8 +29,12 @@
       // console.log(quote);
       let deleteQuoteUrl = '/api/quotes/' + quote.id
       $http.delete(deleteQuoteUrl).then(res => {
-        console.log(deleteQuoteUrl);
-        vm.res = res.data
+        console.log(res);
+        return $http.get('/api/quotes')
+      }).then(res => {
+        vm.quotes = res.data
+      }).catch(err => {
+        console.error(err)
       })
     }
 
