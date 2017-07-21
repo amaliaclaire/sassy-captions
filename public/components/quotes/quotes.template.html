@@ -16,7 +16,7 @@
       <option value="Friendship">Friendship</option>
     </select>
     <a title="test" style="height: 380px; width:380px;"></a>
-    <a ng-repeat="quote in $ctrl.quotes | orderBy: '-popularity'" href="#" title="Post 1" ng-show="quote.name == $ctrl.filterBy || $ctrl.filterBy == 'all-quotes'">
+    <a ng-repeat="quote in $ctrl.quotes" href="#" title="Post 1" ng-show="quote.name == $ctrl.filterBy || $ctrl.filterBy == 'all-quotes'">
       <article>
         <p>{{quote.caption}}</p>
         <figure>
@@ -33,9 +33,12 @@
           <comments quoteid="quote.id" comments="quote.comments"></comments>
           <p="$ctrl.showComments(id)"></p>
 
-          <!-- child component we need to give the id from quote_table look at ng-repeat, need to link that ID to the child component so the child component can make it's own API request -->
-          <!-- <a><i ng-click="$ctrl.upVote(post)" class="glyphicon glyphicon-arrow-up">⬆️</i></a>
-        </figure> -->
+          <!-- <form action="/movies/{{this.id}}?_method=DELETE" method="POST"> -->
+            <input ng-click="$ctrl.deleteQuote(quote)" class="btn btn-sm btn-secondary"
+            type="submit"
+            name="delete"
+            value="Delete Quote">
+          <!-- </form> -->
       </article>
     </a>
   </main>

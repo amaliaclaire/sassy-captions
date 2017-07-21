@@ -11,7 +11,6 @@
 
     vm.$onInit = function () {
       $http.get('/api/quotes').then(function (response){
-        console.log(response.data);
         vm.quotes = response.data
       })
     }
@@ -25,24 +24,30 @@
       // console.log(CommentsService.get());
     }
 
-      vm.upVote = function (quoteId) {
-        console.log(quoteId);
-        let upVoteUrl = '/api/quotes/' + quoteId.id + '/votes'
+    // Delete Quote Function
+    vm.deleteQuote = function (quote){
+      // console.log(quote);
+      let deleteQuoteUrl = '/api/quotes/' + quote.id
+      $http.delete(deleteQuoteUrl).then(res => {
+        console.log(deleteQuoteUrl);
+        vm.res = res.data
+      })
+    }
+
+
+      vm.upVote = function (quote) {
+        console.log(quote);
+        let upVoteUrl = '/api/quotes/' + quote.id + '/votes'
         $http.post(upVoteUrl).then(res => {
-          $http.get('/api/quotes').then(res => {
-            vm.quotes = res.data
-          })
+          quote.popularity++
         })
       }
 
-      vm.downVote = function (quoteId){
-        let downVoteUrl = '/api/quotes/' + quoteId.id + '/votes'
-        if(quoteId.id >= 1){
+      vm.downVote = function (quote){
+        let downVoteUrl = '/api/quotes/' + quote.id + '/votes'
+        if(quote.id >= 1){
           $http.delete(downVoteUrl).then(res =>{
-
-            $http.get('/api/quotes').then(res => {
-              vm.quotes = res.data
-            })
+            quote.popularity--
           })
         }
       }

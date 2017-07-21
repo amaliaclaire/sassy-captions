@@ -21,6 +21,11 @@
        url: '/quotes',
        component: 'quotes',
      })
+    .state({
+      name: 'createQuotePage',
+      url: '/newquote',
+      component: 'createdQuote'
+    })
  }
 
 })();

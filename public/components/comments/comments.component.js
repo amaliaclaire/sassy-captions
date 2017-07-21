@@ -14,14 +14,12 @@
     const vm = this;
 
     vm.$onInit = function () {
-      // console.log('vm', vm);
-      // console.log('quoteid', vm.quoteid);
+
       $http.get('/api/comments').then(function (response){
-       console.log('response', response.data);
+
        vm.comments = response.data.filter(comment => {
          return comment.quote_table_id == vm.quoteid
        })
-      //  console.log('vm.quotes', vm.comme);
      })
 
 

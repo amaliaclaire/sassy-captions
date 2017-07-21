@@ -1,0 +1,38 @@
+{{#if error}}
+<div class="alert alert-danger">
+  {{ error }}
+</div>
+{{/if}}
+
+<form method="POST" action="/quotes" class="well">
+  <div class="form-group">
+    <label for="caption">Quote Caption</label> <input id="caption" name="caption"type="text" class="form-control" value="{{quote.caption}}">
+  </div>
+
+  <div class="form-group">
+    <label for="category">Category</label> <input id="category" name="category"type="text" class="form-control" value="{{quote.category}}">
+    <select>
+      <option>Faith</option>
+      <option>Family</option>
+      <option>Friendship</option>
+      <option>Fun</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="caption">Quote Caption</label> <input id="caption" name="caption"type="text" class="form-control" value="{{quote.caption}}">
+  </div>
+
+  <div class="form-group">
+    <label for="author">Author</label> <input id="author" name="author"type="text" class="form-control" value="{{quote.author}}">
+  </div>
+
+  <div class="form-group">
+    <input id="submit" type="submit">
+  </div>
+
+</form>
+
+<script src="/js/jquery-3.2.0.min.js" charset="utf-8"></script>
+<script src="/js/requests.js" charset="utf-8"></script>
+<script type="text/javascript">

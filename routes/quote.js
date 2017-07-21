@@ -8,7 +8,7 @@ var db = require('../db')
 
 router.get('/', function(req, res, next){
   let quotes = []
-  db('categories').innerJoin('quote_table', 'categories.id', 'quote_table.categories_id')
+  db('categories').innerJoin('quote_table', 'categories.id', 'quote_table.categories_id').orderBy('popularity', 'desc')
   .then(quote_table => {
     quotes = quote_table
     return Promise.all(quote_table.map((quote) => {
@@ -23,6 +23,48 @@ router.get('/', function(req, res, next){
     res.json(quotes)
   })
 })
+
+router.post('/', (req, res, next) => {
+  console.log('/quotes')
+  let categoryId = null;
+  let category = req.body.category
+
+  if(category === 'Family'){
+    categoryId = 1;
+  }else if (category === 'Friendship'){
+    categoryId = 2;
+  }else if (category === 'Faith'){
+    categoryId = 3;
+  } else if (category === 'Fun') {
+    categoryId = 4;
+  }
+
+  let createNewQuote = {
+    caption: req.body.caption,
+    categories_id: categoryId,
+    author: 'anonymous',
+    popularity: 1,
+    background: 'white',
+  }
+
+  db('quote_table').insert(createNewQuote).then(newQuote => {
+    res.json({newQuote: newQuote})
+  }).catch(err => {
+    console.log('err', err);
+    next(err)
+  })
+})
+
+// Delete route for a single quote
+
+router.delete('/:id', (req, res, next) => {
+  let id = req.params.id
+
+  db('quote_table').del().where({id}).then(() => {
+    res.redirect('/quotes')
+  })
+})
+
 
 
 // Upvote and downVote

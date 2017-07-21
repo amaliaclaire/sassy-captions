@@ -1,0 +1,17 @@
+<div ng-class="create-quotes-div">
+  <section>
+    <span>Insert New Quote Here: </span>
+    <textarea ng-model="$ctrl.createCaptionContent"></textarea>
+    <select ng-model="$ctrl.chooseCategory">
+      <option>Faith</option>
+      <option>Family</option>
+      <option>Friendship</option>
+      <option>Fun</option>
+    </select>
+    <textarea ng-model="$ctrl.createAuthor"></textarea>
+    <button ng-click="$ctrl.createQuote()">Submit</button>
+
+    <!-- <input ng-submit="$ctrl.newComment.content" class="form-control"></input> -->
+  </section>
+
+</div>
