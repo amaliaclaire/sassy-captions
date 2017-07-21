@@ -1,0 +1,37 @@
+
+
+.landing-pic{
+  width: 200px;
+  height: 300px;
+}
+
+#video-background{
+  position: absolute;
+}
+
+.btn-default{
+  width: 100px;
+  height: 60px;
+  background-position: center;
+  border-spacing: 10px 50px;
+}
+
+.landing-pic{
+  /*padding: 20px 30px 50px 80px;*/
+  justify-content: space-between;
+  align-content: space-around;
+  /*display: flex; */
+
+  /*position: absolute;
+  top: 50%;
+  left: 50;*/
+
+}
+
+.basic-quote{
+  text-align: center;
+}
+
+.sassy-quote{
+  text-align: center;
+}
