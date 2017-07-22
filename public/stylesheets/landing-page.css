@@ -26,8 +26,11 @@
   text-align: center;
 }
 
+.slogan2{
+  text-align: center; 
+}
+
 #why-sassy-captions{
-  /*text-align: left;*/
   border: solid;
   text-align: center;
 
@@ -67,11 +70,6 @@
 }
 
 #good-vibes-only{
-  /*float: left;
-  margin-right: 10px;
-  clear:both;
-  position: relative;*/
-  /*width: 100%;*/
   float: right;
   border-radius: 1em;
   margin-right: 4px;
@@ -79,4 +77,19 @@
   top:6px;
   height: 40em;
 
+}
+
+.pink-phone-pic{
+  float: right;
+  border-radius: 1em;
+  margin-right: 4px;
+  position: relative;
+  top:6px;
+  height: 40em;
+
+}
+
+.slay{
+  height: 40em;
+  width: 30em;
 }
