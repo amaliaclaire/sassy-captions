@@ -5,3 +5,69 @@
     transform: translatex(-50%);
   }
 }
+.responsiveslides {
+    position: relative;
+    width: 980px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.responsiveslides-wrap {
+    background: #fff1ee;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.responsiveslides-wrap {
+    background: #fff1ee;
+}
+
+#landing-page-slogan{
+  text-align: center;
+}
+
+#why-sassy-captions{
+  text-align: left;
+  border: solid;
+  width: 25em;
+
+
+}
+
+#why-sassy-captions-paragraph{
+  text-align: center;
+  width: 40em;
+  padding: inherit;
+  border-radius: 1em;
+  margin-left: 0px;
+    overflow:auto;
+    display:block;
+
+}
+
+.sqs-block:not(.sqs-block-html):not(.sqs-block-markdown) {
+    clear: both;
+}
+
+.sqs-block {
+    padding-left: 17px;
+    padding-right: 17px;
+}
+
+.sqs-block {
+    position: relative;
+    height: auto;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    outline: none;
+    box-shadow: inset 0 0 0 1px rgba(128,128,128,0);
+    -webkit-transition: box-shadow .2s ease-in-out;
+    transition: box-shadow .2s ease-in-out;
+}
+
+#good-vibes-only{
+  float: left;
+  margin-right: 10px;
+  clear:both;
+  position: relative;
+}
