@@ -1,11 +1,65 @@
 
 <!-- ANGULARIZE IT -->
+<!-- Navigation Bar -->
+<nav row class="navbar navbar-default" role="navigation">
+  <div class="navbar-header col-xs-12">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+        <li><h4><a href="#">Sassy Captions</a></h4></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-center">
+        <li><a href="quotes">All Quotes</a></li>
+        <li><a href="newquote">Create Quotes</a></li>
+      <li><a href="#">About Us</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+<!-- Navigation Bar -->
+<div class="categories-name">
+  <h1 style="font-family:courier">Categories</h1>
+</div>
+
+<div class="faith-card category-container col-xs-3">
+<h1 style="font-family:courier">Faith</h1>
+</div>
+
+<div class="family-card category-container col-xs-3">
+<h1 style="font-family:courier">Family</h1>
+</div>
+
+<div class="fun-card category-container col-xs-3">
+<h1 style="font-family:courier">Fun</h1>
+</div>
+
+<div class="friendship-card category-container col-xs-3">
+<h1 style="font-family:courier">Friendship</h1>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <div>
-  <h1 id="title-quotes">QUOTE PAGE</h1>
+  <!-- <h1 id="title-quotes">QUOTE PAGE</h1> -->
 
   <main>
-    <select
+    <select class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
       ng-model="$ctrl.filterBy"
       ng-init="$ctrl.filterBy = 'all-quotes'"
     >
@@ -15,26 +69,34 @@
       <option value="Faith">Faith</option>
       <option value="Friendship">Friendship</option>
     </select>
-    <a title="test" style="height: 380px; width:380px;"></a>
+
+    <br>
+    <br>
+    <br>
+
+    <!-- can track by index if % 3 change the background (make CSS class make it whatever it needs to be. Ng-class can make a coniditional with the class and have it later add or remove depending on the rules i set) -->
     <a ng-repeat="quote in $ctrl.quotes" href="#" title="Post 1" ng-show="quote.name == $ctrl.filterBy || $ctrl.filterBy == 'all-quotes'">
       <article>
-        <p>{{quote.caption}}</p>
+        <p class="quote-caption">{{quote.caption}}</p>
         <figure>
-          <img src="https://placehold.it/480x360" alt="image-1">
-          <figcaption>{{quote.author}}</figcaption>
-          <p>{{quote.name}}</p>
-          <p ng-click="$ctrl.upVote(quote)">⬆️</p>
-          <p>{{quote.popularity}}</p>
-          <p ng-click="$ctrl.downVote(quote)">⬇️</p>
-          <button class="btn" ngclipboard data-clipboard-text="{{quote.caption}}">Copy Quote</button>
+          <br>
+          <figcaption class="author-quote">- {{quote.author}}</figcaption>
+          <p class="category-quote">{{quote.name}}</p>
+          <div class="up-down-vote">
+            <p ng-click="$ctrl.upVote(quote)">⬆️</p>
+            <p>{{quote.popularity}}</p>
+            <p ng-click="$ctrl.downVote(quote)">⬇️</p>
+          </div>
+          <button class="btn copy-quote" ngclipboard data-clipboard-text="{{quote.caption}}">Copy Quote</button>
 
-          <button ng-click="$ctrl.setCommentDisplay(quote.id)">View Comments</button>
-          TESTING {{quote.id}}
+          <p ng-click="$ctrl.setCommentDisplay(quote.id)"></p>
+          <!-- TESTING {{quote.id}} -->
           <comments quoteid="quote.id" comments="quote.comments"></comments>
           <p="$ctrl.showComments(id)"></p>
 
           <!-- <form action="/movies/{{this.id}}?_method=DELETE" method="POST"> -->
-            <input ng-click="$ctrl.deleteQuote(quote)" class="btn btn-sm btn-secondary"
+          <br>
+            <input ng-click="$ctrl.deleteQuote(quote)" class="btn delete-button btn-sm btn-secondary"
             type="submit"
             name="delete"
             value="Delete Quote">
@@ -43,4 +105,11 @@
     </a>
   </main>
 
+</div>
+
+<!-- footer -->
+<div class="panel-default">
+  <div class="panel-body">
+  </div>
+  <div class="panel-footer">Contact Us</div>
 </div>

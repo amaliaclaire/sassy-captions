@@ -19,7 +19,9 @@
 }
 
 .responsiveslides-wrap {
-    background: #fff1ee;
+    background-image: url('../backgrounds/bonus/watercolor1.jpg');
+    background-position: center;
+    background-size: cover;
 }
 
 #landing-page-slogan{
@@ -27,24 +29,23 @@
 }
 
 .slogan2{
-  text-align: center; 
+  text-align: center;
 }
 
-#why-sassy-captions{
+.why-sassy-captions{
   border: solid;
   text-align: center;
-
-
-
+  background-color: #FFD6D0;
 }
 
-#why-sassy-captions-paragraph{
+.why-sassy-captions-paragraph{
   text-align: center;
-  width: 40em;
+  font-size: 2rem;
+  /*width: 40em;
   padding: inherit;
   border-radius: 1em;
   margin-left: 0px;
-    overflow:auto;
+    overflow:auto;*/
 
 
 }
@@ -69,14 +70,15 @@
     transition: box-shadow .2s ease-in-out;
 }
 
-#good-vibes-only{
+.good-vibes-only{
   float: right;
-  border-radius: 1em;
-  margin-right: 4px;
-  position: relative;
+  /*border-radius: 1em;*/
+  /*margin-right: 4px;*/
+  /*position: relative;
   top:6px;
-  height: 40em;
-
+  height: 40em;*/
+  display: block; /* look this up */
+  /*margin: 0 auto; /* look this up */*/
 }
 
 .pink-phone-pic{
@@ -89,7 +91,12 @@
 
 }
 
+
 .slay{
   height: 40em;
   width: 30em;
+}
+
+.landing-page-create-quote{
+  background-image: url('../backgrounds/seamless/3.png')
 }
