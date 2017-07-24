@@ -1,5 +1,4 @@
-
-<!-- ANGULARIZE IT -->
+<html>
 <!-- Navigation Bar -->
 <nav row class="navbar navbar-default" role="navigation">
   <div class="navbar-header col-xs-12">
@@ -24,9 +23,32 @@
   </div>
 </nav>
 <!-- Navigation Bar -->
-<div class="categories-name">
-  <h1 style="font-family:courier">Categories</h1>
+<!-- Parallax attempt -->
+<div class="parallax">
+  <div class="parallax-border">
+    <span class="parralax-caption">All Quotes</span>
+  </div>
 </div>
+
+
+<div style="height: 400px;background-color:#FF86C2; font-size:36px">
+Gluten-free humblebrag next level, four loko viral 90's microdosing austin godard vinyl iceland slow-carb sriracha man bun asymmetrical. Shabby chic tumeric drinking vinegar meggings pok pok try-hard. Art party DIY tumblr, bespoke disrupt XOXO subway tile hammock stumptown hell of single-origin coffee. IPhone viral distillery adaptogen poke. Vexillologist heirloom synth green juice listicle.
+</div>
+
+<div class="parallax"></div>
+
+<br>
+<br>
+<div class="parallax-border-categories">
+  <span class="parralax-caption-categories">Categories</span>
+</div>
+
+<br>
+<br>
+
+<!-- ANGULARIZE IT -->
+
+
 
 <div class="faith-card category-container col-xs-3">
 <h1 style="font-family:courier">Faith</h1>
@@ -55,8 +77,27 @@
 <br>
 <br>
 
-<div>
-  <!-- <h1 id="title-quotes">QUOTE PAGE</h1> -->
+<div class="col-xs-12">
+  <h1 class="create-a-quote">
+    <a href="/newquote">Create A Quote</a>
+  </h1>
+</div>
+
+
+<!-- Parallax attempt PART 2-->
+<div class="parallax-selfie">
+  <div class="parallax-border-selfie">
+  </div>
+</div>
+
+
+<div style="height: 200px;background-color:#FF86C2; font-size:36px">
+Gluten-free humblebrag next level, four loko viral 90's microdosing austin godard vinyl iceland slow-carb sriracha man bun asymmetrical. Shabby chic tumeric drinking vinegar meggings pok pok try-hard. Art party DIY tumblr, bespoke disrupt
+</div>
+
+
+
+
 
   <main>
     <select class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
@@ -75,7 +116,7 @@
     <br>
 
     <!-- can track by index if % 3 change the background (make CSS class make it whatever it needs to be. Ng-class can make a coniditional with the class and have it later add or remove depending on the rules i set) -->
-    <a ng-repeat="quote in $ctrl.quotes" href="#" title="Post 1" ng-show="quote.name == $ctrl.filterBy || $ctrl.filterBy == 'all-quotes'">
+     <a class="quote-backgrounds-box"ng-repeat="quote in $ctrl.quotes" href="#" title="Post 1" ng-show="quote.name == $ctrl.filterBy || $ctrl.filterBy == 'all-quotes'">
       <article>
         <p class="quote-caption">{{quote.caption}}</p>
         <figure>
@@ -89,10 +130,16 @@
           </div>
           <button class="btn copy-quote" ngclipboard data-clipboard-text="{{quote.caption}}">Copy Quote</button>
 
-          <p ng-click="$ctrl.setCommentDisplay(quote.id)"></p>
-          <!-- TESTING {{quote.id}} -->
-          <comments quoteid="quote.id" comments="quote.comments"></comments>
-          <p="$ctrl.showComments(id)"></p>
+          <div>
+            <button type="button" ng-click="onClick = true" aria-label="Toggle ngShow" class="slider">View Comments</button>
+            <br>
+              <div class="animate-show-hide" ng-show="onClick">
+              <p ng-click="$ctrl.setCommentDisplay(quote.id)"></p>
+
+              <comments quoteid="quote.id" comments="quote.comments"></comments>
+              <p="$ctrl.showComments(id)"></p>
+              </div>
+            </div>
 
           <!-- <form action="/movies/{{this.id}}?_method=DELETE" method="POST"> -->
           <br>
@@ -100,7 +147,7 @@
             type="submit"
             name="delete"
             value="Delete Quote">
-          <!-- </form> -->
+          </form>
       </article>
     </a>
   </main>
@@ -113,3 +160,4 @@
   </div>
   <div class="panel-footer">Contact Us</div>
 </div>
+</html>

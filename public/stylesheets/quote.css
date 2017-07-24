@@ -8,6 +8,37 @@
   text-align: center;
 }*/
 
+/*parallex stuff attempt here*/
+
+.parallax {
+    /* The image used */
+    background-image: url("https://envato-shoebox-0.imgix.net/7ced/0153-8cf1-4406-bd77-61333e14b6b8/0006573.jpg?w=1400&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalpha=18&markalign=center%2Cmiddle&auto=compress%2Cformat&s=831b39b3565678ad6ecb60f02c5657f6");
+
+    /* Full height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-selfie {
+    /* The image used */
+    background-image: url("https://envato-shoebox-0.imgix.net/4dcb/eba2-4c4d-4a83-8046-f9103a5747c0/syda_0220269.jpg?w=1400&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalpha=18&markalign=center%2Cmiddle&auto=compress%2Cformat&s=ba86d126bbcc3c87ed0a5dad923b4910");
+
+    /* Full height */
+    height: 90%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 .author-quote{
   font-family: serif;
   font-size: 150%;
@@ -15,12 +46,17 @@
 }
 body{
 			font: 1rem/1.6 "Helvetica", Sans-serif;
+      height: 100%;
 		}
+
+html{
+  height: 100%;
+}
 
 		main{
 			width: 90%;
 			margin:50px auto;
-      /*border-radius: 1em; */
+      border-radius: 1em;
 
 			-moz-column-width: 220px;
 			-webkit-column-width: 220px;
@@ -37,8 +73,13 @@ body{
 		}
 
 .btn-info{
-  width: 80em;
-  margin: 0 auto;
+  height: 5em;
+  width: 20em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+
 }
 		a[title] figure img{
 			width: 100%;
@@ -52,7 +93,11 @@ body{
 			color:#424242;
 			box-shadow: 0 1px 3px rgba(0,0,0, .12), 0 1px 2px rgba(0,0,0, .24);
 			display: inline-block;
+      border-style: double;
 
+
+      height: 30em;
+      width: 29em;
 			margin-bottom:20px;
       position: relative;
       overflow: hidden;
@@ -69,10 +114,11 @@ body{
     .category-container{
       border: solid;
       text-align: center;
-      height: 40em;
+      height: 25em;
       padding-top: 1em;
       background-position: center;
       background-size: cover;
+
 
     }
 
@@ -85,6 +131,7 @@ body{
       font-size: 100%;
       text-align: left;
       border: block;
+
     }
 
     .copy-quote{
@@ -94,29 +141,48 @@ body{
 
     }
 
+    .create-a-quote{
+      text-align: center;
+      background-image: url('https://s-media-cache-ak0.pinimg.com/564x/c8/45/50/c84550366a07227bbe2dd6e115af3416.jpg');
+      background-size: cover;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border: solid;
+      text-align: center;
+      height: 10em;
+      width: 19em;
+      padding-top: 1em;
+      background-position: center;
+      background-size: cover;
+
+    }
+
     .delete-button{
       position: absolute;
       right: 10px;
       bottom: 5px;
     }
 
+
     .faith-card{
-      background-image: url('../backgrounds/seamless/4.png');
+      background-image: url('https://s-media-cache-ak0.pinimg.com/564x/5f/26/c7/5f26c7d5ca936af42d17a8af8cbc8134.jpg');
 
     }
 
     .family-card{
-      background-image: url('../backgrounds/seamless/11.png');
+      background-image: url('https://s-media-cache-ak0.pinimg.com/564x/a4/ee/fb/a4eefbab8bc693d5caa17a730be0c5da.jpg');
+      display: block;
 
     }
 
     .fun-card{
-      background-image: url('../backgrounds/seamless/3.png');
+      background-image: url('https://s-media-cache-ak0.pinimg.com/564x/e3/4b/23/e34b23fd187cae8f68277860ea2db557.jpg');
 
     }
 
     .friendship-card{
-      background-image: url('../backgrounds/seamless/8.png');
+      background-image: url('https://s-media-cache-ak0.pinimg.com/564x/4e/0a/0a/4e0a0aa5ee86ca1d205212c85d905aa5.jpg');
 
     }
 
@@ -129,3 +195,40 @@ body{
       font-size: 250%;
       text-align: center;
     }
+
+    .quote-backgrounds-box{
+      background-image: url('https://s-media-cache-ak0.pinimg.com/564x/54/60/20/54602047d95321270b4200f6da8ce32a.jpg');
+    }
+
+    .slider{
+      position: flex;
+      center: 20em;
+      bottom: 1em;
+    }
+
+    .parallax-border {
+      position: absolute;
+      top: 50%;
+      right: 40%;
+      width: 400px;
+      background-color: #111;
+      color: #fff;
+      padding: 18px;
+      font-size: 25px;
+      letter-spacing: 10px;
+      text-align: center;
+    }
+
+    .parallax-border-categories {
+
+        top: 50%;
+        right: 40%;
+        width: 400px;
+        background-color: #111;
+        color: #fff;
+        padding: 18px;
+        font-size: 25px;
+        letter-spacing: 10px;
+        text-align: center;
+        margin: auto;
+      }
