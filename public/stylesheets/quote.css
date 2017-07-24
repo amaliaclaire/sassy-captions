@@ -94,10 +94,12 @@ html{
 			box-shadow: 0 1px 3px rgba(0,0,0, .12), 0 1px 2px rgba(0,0,0, .24);
 			display: inline-block;
       border-style: double;
+      border-radius: 1em;
 
 
-      height: 30em;
-      width: 29em;
+      /*height: 30em;
+      width: 29em;*/
+
 			margin-bottom:20px;
       position: relative;
       overflow: hidden;
@@ -197,7 +199,11 @@ html{
     }
 
     .quote-backgrounds-box{
-      background-image: url('https://s-media-cache-ak0.pinimg.com/564x/54/60/20/54602047d95321270b4200f6da8ce32a.jpg');
+      /*background-image: url('../backgrounds/bonus/watercolor-lines.jpg');*/
+      /*background-image: url('https://s-media-cache-ak0.pinimg.com/564x/49/22/87/49228752cabbef2f1d1e930fe6b51e01.jpg');*/
+      
+        /*background-image: url('http://lorempixel.com/400/200/nightlife/');*/
+        /*give the background image a string. change the angular using ng-style*/
     }
 
     .slider{

@@ -1,3 +1,20 @@
+
+.bg{
+  /* The image used */
+    background-image: url("https://envato-shoebox-0.imgix.net/9421/07cf-60cf-42b2-a6ef-b439a38bd9db/IMG_1296.jpg?w=1400&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalpha=18&markalign=center%2Cmiddle&auto=compress%2Cformat&s=19a26eb5e54c39d025cd98b81daa3b00");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+
+}
+
+
 @media (min-width: 768px) {
   .navbar-nav.navbar-center {
     position: absolute;
@@ -35,12 +52,14 @@
 .why-sassy-captions{
   border: solid;
   text-align: center;
-  background-color: #FFD6D0;
+  background-color: #FFC0B4;
+  border-radius: 1em; 
 }
 
 .why-sassy-captions-paragraph{
   text-align: center;
   font-size: 2rem;
+  background-color: #FFC0B4;
   /*width: 40em;
   padding: inherit;
   border-radius: 1em;
@@ -91,6 +110,20 @@
 
 }
 
+.parallax-landing-page{
+  /* The image used */
+   background-image: url('https://envato-shoebox-0.imgix.net/9421/07cf-60cf-42b2-a6ef-b439a38bd9db/IMG_1296.jpg?w=1400&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalpha=18&markalign=center%2Cmiddle&auto=compress%2Cformat&s=19a26eb5e54c39d025cd98b81daa3b00');
+
+   /* Full height */
+   height: 100%;
+
+   /* Create the parallax scrolling effect */
+   background-attachment: fixed;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
 
 .slay{
   height: 40em;
@@ -99,4 +132,16 @@
 
 .landing-page-create-quote{
   background-image: url('../backgrounds/seamless/3.png')
+
+}
+
+.landingpage-selfie-girls{
+  background-image: url('https://envato-shoebox-0.imgix.net/9421/07cf-60cf-42b2-a6ef-b439a38bd9db/IMG_1296.jpg?w=1400&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalpha=18&markalign=center%2Cmiddle&auto=compress%2Cformat&s=19a26eb5e54c39d025cd98b81daa3b00')
+  height: 80em;
+  width: 100em;
+}
+
+.loves-likes-swipes{
+  font-family: Proxima Nova;
+  text-align: center;
 }
