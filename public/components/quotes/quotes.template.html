@@ -31,7 +31,7 @@
 </div>
 
 
-<div style="height: 400px;background-color:#FF86C2; font-size:36px">
+<div style="height: 300px;background-color:#FFC0B4; font-size:36px">
 Gluten-free humblebrag next level, four loko viral 90's microdosing austin godard vinyl iceland slow-carb sriracha man bun asymmetrical. Shabby chic tumeric drinking vinegar meggings pok pok try-hard. Art party DIY tumblr, bespoke disrupt XOXO subway tile hammock stumptown hell of single-origin coffee. IPhone viral distillery adaptogen poke. Vexillologist heirloom synth green juice listicle.
 </div>
 
@@ -91,7 +91,7 @@ Gluten-free humblebrag next level, four loko viral 90's microdosing austin godar
 </div>
 
 
-<div style="height: 200px;background-color:#FF86C2; font-size:36px">
+<div style="height: 200px;background-color:#FFC0B4; font-size:36px">
 Gluten-free humblebrag next level, four loko viral 90's microdosing austin godard vinyl iceland slow-carb sriracha man bun asymmetrical. Shabby chic tumeric drinking vinegar meggings pok pok try-hard. Art party DIY tumblr, bespoke disrupt
 </div>
 
@@ -116,7 +116,8 @@ Gluten-free humblebrag next level, four loko viral 90's microdosing austin godar
     <br>
 
     <!-- can track by index if % 3 change the background (make CSS class make it whatever it needs to be. Ng-class can make a coniditional with the class and have it later add or remove depending on the rules i set) -->
-     <a class="quote-backgrounds-box" ng-repeat="quote in $ctrl.quotes" ng-style="{'background-image': 'url(https://s-media-cache-ak0.pinimg.com/564x/49/22/87/49228752cabbef2f1d1e930fe6b51e01.jpg)'}" href="#" title="Post 1" ng-show="quote.name == $ctrl.filterBy || $ctrl.filterBy == 'all-quotes'">
+     <a class="quote-backgrounds-box" ng-repeat="quote in $ctrl.quotes track by $index "
+     ng-init="num=$index % 4" ng-class="{'background-image-{{num}}': true}" href="#" title="Post 1" ng-show="quote.name == $ctrl.filterBy || $ctrl.filterBy == 'all-quotes'">
       <article>
         <p class="quote-caption">{{quote.caption}}</p>
         <figure>

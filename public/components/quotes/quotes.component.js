@@ -38,6 +38,12 @@
       })
     }
 
+    vm.getRandomImage = function (){
+      return "url('./backgrounds/seamless/3.png')"
+
+      // "{'background-image': 'url(https://s-media-cache-ak0.pinimg.com/564x/49/22/87/49228752cabbef2f1d1e930fe6b51e01.jpg)'}"
+    }
+
 
       vm.upVote = function (quote) {
         console.log(quote);
