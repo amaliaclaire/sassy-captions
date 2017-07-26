@@ -117,7 +117,7 @@ Gluten-free humblebrag next level, four loko viral 90's microdosing austin godar
 
     <!-- can track by index if % 3 change the background (make CSS class make it whatever it needs to be. Ng-class can make a coniditional with the class and have it later add or remove depending on the rules i set) -->
      <a class="quote-backgrounds-box" ng-repeat="quote in $ctrl.quotes track by $index "
-     ng-init="num=$index % 4" ng-class="{'background-image-{{num}}': true}" href="#" title="Post 1" ng-show="quote.name == $ctrl.filterBy || $ctrl.filterBy == 'all-quotes'">
+     ng-init="num=$index % 8" ng-class="{'background-image-{{num}}': true}" href="#" title="Post 1" ng-show="quote.name == $ctrl.filterBy || $ctrl.filterBy == 'all-quotes'">
       <article>
         <p class="quote-caption">{{quote.caption}}</p>
         <figure>

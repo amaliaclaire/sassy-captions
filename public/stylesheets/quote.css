@@ -213,6 +213,23 @@ html{
       background-image: url('https://s-media-cache-ak0.pinimg.com/564x/ca/3d/50/ca3d508342e937196b2863ccf3c48dd0.jpg');
     }
 
+    .background-image-4 {
+      background-image: url('https://s-media-cache-ak0.pinimg.com/564x/68/1c/83/681c83a4552fccfcd8de1f5a89b0d0e8.jpg')
+    }
+
+    .background-image-5 {
+      background-image: url('https://s-media-cache-ak0.pinimg.com/564x/92/da/61/92da6190522d46386a28d62770ad00c7.jpg')
+    }
+
+    .background-image-6 {
+      background-image: url('https://s-media-cache-ak0.pinimg.com/564x/c6/50/57/c650572f05377a33eef64923dadb41d5.jpg')
+    }
+
+    .background-image-7 {
+      background-image: url('https://s-media-cache-ak0.pinimg.com/564x/0b/2b/2c/0b2b2c49b7f0d7ea81a067b4a88b6402.jpg')
+    }
+
+
     .slider{
       position: flex;
       center: 20em;
