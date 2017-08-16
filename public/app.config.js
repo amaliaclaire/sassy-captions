@@ -22,7 +22,7 @@
        component: 'quotes',
      })
     .state({
-      name: 'createQuotePage',
+      name: 'createdQuotePage',
       url: '/newquote',
       component: 'createdQuote'
     })

@@ -129,9 +129,10 @@ Gluten-free humblebrag next level, four loko viral 90's microdosing austin godar
             <p>{{quote.popularity}}</p>
             <p ng-click="$ctrl.downVote(quote)">⬇️</p>
           </div>
+          <div>
           <button class="btn copy-quote" ngclipboard data-clipboard-text="{{quote.caption}}">Copy Quote</button>
 
-          <div>
+          <div class="quote-buttons">
             <button type="button" ng-click="onClick = true" aria-label="Toggle ngShow" class="slider">View Comments</button>
             <br>
               <div class="animate-show-hide" ng-show="onClick">
@@ -148,6 +149,7 @@ Gluten-free humblebrag next level, four loko viral 90's microdosing austin godar
             type="submit"
             name="delete"
             value="Delete Quote">
+          </div>
           </form>
       </article>
     </a>

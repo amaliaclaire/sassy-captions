@@ -1,17 +1,59 @@
-<div ng-class="create-quotes-div slider">
+<!-- Navigation Bar -->
+<nav row class="navbar navbar-default" role="navigation">
+  <div class="navbar-header col-xs-12">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
+  <div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav">
+        <li><h4><a href="#">Sassy Captions</a></h4></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-center">
+        <li><a href="quotes">All Quotes</a></li>
+        <li><a href="newquote">Create Quotes</a></li>
+      <li><a href="#">About Us</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section>
+<div class="category-container-createdQuote">
+  <h4>Create Quote</h4>
+    <p>Feeling inspired? Create a quote, make it sassy and have the ability to share it with your friends. Why keep your creativity in, when you can inject it into the social media world? </p>
+
+</div>
+<div class="poolside">
+<img  src="https://slack-imgs.com/?c=1&url=https%3A%2F%2Fenvato-shoebox-0.imgix.net%2Fe03c%2Fb2a3-d909-4eef-8618-7b3573561feb%2FB07A6495.jpg%3Fw%3D1200%26fit%3Dmax%26mark%3Dhttps%253A%252F%252Felements-assets.envato.com%252Fstatic%252Fwatermark2.png%26markalpha%3D18%26markalign%3Dcenter%252Cmiddle%26auto%3Dcompress%252Cformat%26s%3D3a93fd98d8959046a0d39e281b5ce33d">
+</div>
+</section>
+
+
+<br>
+<!-- create quote section here -->
+<div class="create-quote-section"ng-class="create-quotes-div slider">
   <section>
-    <span>Insert New Quote Here: </span>
+    <div class="insert-quote-div">Insert New Quote Here: </div>
     <textarea ng-model="$ctrl.createCaptionContent"></textarea>
+    <br>
+    <div>Category</div>
     <select ng-model="$ctrl.chooseCategory">
       <option>Faith</option>
       <option>Family</option>
       <option>Friendship</option>
       <option>Fun</option>
     </select>
+    <br>
+    <div>Author</div>
     <textarea ng-model="$ctrl.createAuthor"></textarea>
     <button ng-click="$ctrl.createQuote()">Submit</button>
 
-    <!-- <input ng-submit="$ctrl.newComment.content" class="form-control"></input> -->
+
   </section>
 
 </div>

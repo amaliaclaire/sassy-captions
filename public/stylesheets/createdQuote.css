@@ -1,0 +1,31 @@
+.category-container-createdQuote{
+  border: solid;
+  text-align: center;
+  height: 25em;
+  width: 25em;
+  padding-top: 1em;
+  background-position: center;
+  background-size: cover;
+  background-color: #FFC0B4;
+  border-radius: 1em;
+  letter-spacing: 2px;
+  float: left;
+}
+
+.poolside{
+  style: 100%;
+  float: right;
+  opacity: 0.9;
+
+
+}
+
+.create-quote-section{
+  background-color: pink;
+  border-radius: bold;
+  height: 25em;
+  width: 25em;
+  position: fixed;
+  bottom: 0;
+  z-index: 9999;
+}

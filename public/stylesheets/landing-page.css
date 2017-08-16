@@ -1,4 +1,7 @@
 
+.create-sassy-captions{
+  /*background-color: pink; */
+}
 .bg{
   /* The image used */
     background-image: url("https://envato-shoebox-0.imgix.net/9421/07cf-60cf-42b2-a6ef-b439a38bd9db/IMG_1296.jpg?w=1400&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalpha=18&markalign=center%2Cmiddle&auto=compress%2Cformat&s=19a26eb5e54c39d025cd98b81daa3b00");
@@ -13,7 +16,26 @@
     background-color: black;
 
 }
+.concert-girls{
+  
+}
 
+.frame{
+  border: 15px solid #FFC0B4;
+  padding: 10px;
+}
+
+.happy-outofstyle{
+  width: 20em;
+}
+
+.hair-flip{
+  width: 40em;
+}
+
+.iphone-selfie{
+  height: 30em;
+}
 
 @media (min-width: 768px) {
   .navbar-nav.navbar-center {
@@ -53,7 +75,7 @@
   border: solid;
   text-align: center;
   background-color: #FFC0B4;
-  border-radius: 1em; 
+  border-radius: 1em;
 }
 
 .why-sassy-captions-paragraph{
@@ -125,23 +147,30 @@
 }
 
 
-.slay{
-  height: 40em;
-  width: 30em;
-}
+
 
 .landing-page-create-quote{
   background-image: url('../backgrounds/seamless/3.png')
 
 }
 
-.landingpage-selfie-girls{
+/*.landingpage-selfie-girls{
   background-image: url('https://envato-shoebox-0.imgix.net/9421/07cf-60cf-42b2-a6ef-b439a38bd9db/IMG_1296.jpg?w=1400&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalpha=18&markalign=center%2Cmiddle&auto=compress%2Cformat&s=19a26eb5e54c39d025cd98b81daa3b00')
   height: 80em;
   width: 100em;
-}
+}*/
 
+.landing-page-sassy h2{
+  text-align: center;
+  color: #FFC0B4;
+}
 .loves-likes-swipes{
   font-family: Proxima Nova;
   text-align: center;
+}
+
+
+.slay{
+  height: 40em;
+  width: 30em;
 }

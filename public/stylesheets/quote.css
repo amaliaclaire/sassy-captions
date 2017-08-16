@@ -206,15 +206,15 @@ html{
       /*background-image: url('../backgrounds/seamless/4.png');*/
 
 
-      background-image: url('https://s-media-cache-ak0.pinimg.com/564x/22/2a/94/222a9405a77eba12530d23ce1a900d6c.jpg');
+      background-image: url('https://s-media-cache-ak0.pinimg.com/564x/fe/87/c9/fe87c9833a547ab3cc2a1bdc1390931c.jpg');
     }
 
     .background-image-3 {
-      background-image: url('https://s-media-cache-ak0.pinimg.com/564x/ca/3d/50/ca3d508342e937196b2863ccf3c48dd0.jpg');
+      background-image: url('https://s-media-cache-ak0.pinimg.com/564x/f6/b7/44/f6b7449232acbe72cf40b5b7cbaf397d.jpg');
     }
 
     .background-image-4 {
-      background-image: url('https://s-media-cache-ak0.pinimg.com/564x/68/1c/83/681c83a4552fccfcd8de1f5a89b0d0e8.jpg')
+      background-image: url('https://s-media-cache-ak0.pinimg.com/564x/57/45/b8/5745b8d2bd9ca8190f246c4b964a59bf.jpg')
     }
 
     .background-image-5 {
@@ -261,4 +261,9 @@ html{
         letter-spacing: 10px;
         text-align: center;
         margin: auto;
+      }
+
+      .quote-buttons{
+        display: block;
+        margin: 0 auto; 
       }
