@@ -42,7 +42,7 @@ router.post('/', (req, res, next) => {
   let createNewQuote = {
     caption: req.body.caption,
     categories_id: categoryId,
-    author: 'anonymous',
+    author: req.body.author,
     popularity: 1,
     background: 'white',
   }
