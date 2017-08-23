@@ -31,8 +31,10 @@
 </div>
 
 
-<div style="height: 300px;background-color:#FFC0B4; font-size:36px">
-Gluten-free humblebrag next level, four loko viral 90's microdosing austin godard vinyl iceland slow-carb sriracha man bun asymmetrical. Shabby chic tumeric drinking vinegar meggings pok pok try-hard. Art party DIY tumblr, bespoke disrupt XOXO subway tile hammock stumptown hell of single-origin coffee. IPhone viral distillery adaptogen poke. Vexillologist heirloom synth green juice listicle.
+<div style="height: 220px;background-color:#FFC0B4; font-size:36px">
+Come scope out the best captions for your picture perfect photos. Get the most out of your loves, likes and swipes with our collections of quotes that can fit best with any situation. Got a photo with you and your family? Done. Hanging out with your ladies at a club? We're on it. At a Sunday service rocking a pretty white dress? God would be proud.
+
+- Sassy Captions
 </div>
 
 <div class="parallax"></div>
@@ -91,7 +93,7 @@ Gluten-free humblebrag next level, four loko viral 90's microdosing austin godar
 </div>
 
 
-<div style="height: 200px;background-color:#FFC0B4; font-size:36px">
+<div style="height: 170px;background-color:#FFC0B4; font-size:36px">
 Gluten-free humblebrag next level, four loko viral 90's microdosing austin godard vinyl iceland slow-carb sriracha man bun asymmetrical. Shabby chic tumeric drinking vinegar meggings pok pok try-hard. Art party DIY tumblr, bespoke disrupt
 </div>
 
@@ -130,37 +132,30 @@ Gluten-free humblebrag next level, four loko viral 90's microdosing austin godar
             <p ng-click="$ctrl.downVote(quote)">⬇️</p>
           </div>
           <div>
-          <button class="btn copy-quote" ngclipboard data-clipboard-text="{{quote.caption}}">Copy Quote</button>
+
+
 
           <div class="quote-buttons">
-            <button type="button" ng-click="onClick = true" aria-label="Toggle ngShow" class="slider">View Comments</button>
-            <br>
-              <div class="animate-show-hide" ng-show="onClick">
-              <p ng-click="$ctrl.setCommentDisplay(quote.id)"></p>
+            <button class="btn copy-quote" ngclipboard data-clipboard-text="{{quote.caption}}">Copy Quote</button>
 
-              <comments quoteid="quote.id" comments="quote.comments"></comments>
-              <p="$ctrl.showComments(id)"></p>
-              </div>
-            </div>
+            <!-- TODO: have toggle off and on -->
+            <button type="button" ng-click="$ctrl.toggleViewComments(quote)" aria-label="Toggle ngShow" ng-show="quote.viewButtonClicked === false" class="slider btn delete-button">View Comments</button>
 
-          <!-- <form action="/movies/{{this.id}}?_method=DELETE" method="POST"> -->
-          <br>
-            <input ng-click="$ctrl.deleteQuote(quote)" class="btn delete-button btn-sm btn-secondary"
-            type="submit"
-            name="delete"
-            value="Delete Quote">
+            <button type="button" ng-click="$ctrl.toggleViewComments(quote)" aria-label="Toggle ngShow" ng-show="quote.viewButtonClicked === true" class="slider btn delete-button">Hide Comments</button>
+
+
+            <button ng-click="$ctrl.deleteQuote(quote)" class="btn delete-button btn-sm btn-secondary">Delete Quote</button>
           </div>
-          </form>
+
+          <div class="animate-show-hide btn" ng-show="quote.viewButtonClicked === true">
+            <p ng-click="$ctrl.setCommentDisplay(quote.id)"></p>
+
+            <comments quoteid="quote.id" comments="quote.comments"></comments>
+            <p="$ctrl.showComments(id)"></p>
+          </div>
+
       </article>
     </a>
   </main>
 
 </div>
-
-<!-- footer -->
-<div class="panel-default">
-  <div class="panel-body">
-  </div>
-  <div class="panel-footer">Contact Us</div>
-</div>
-</html>

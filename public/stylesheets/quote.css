@@ -127,12 +127,12 @@ html{
 
     }
 
-    .copy-quote{
+    /*.copy-quote{
       position: absolute;
       left: 10px;
       bottom: 5px;
 
-    }
+    }*/
 
     .create-a-quote{
       text-align: center;
@@ -151,11 +151,11 @@ html{
 
     }
 
-    .delete-button{
+    /*.delete-button{
       position: absolute;
       right: 10px;
       bottom: 5px;
-    }
+    }*/
 
 
     .faith-card{
@@ -190,43 +190,35 @@ html{
     }
 
     .background-image-0{
-      background-image: url('https://s-media-cache-ak0.pinimg.com/originals/02/11/9a/02119ac8b1dd06ed11b9790e571b116e.jpg')
+      background-image: url('https://i.pinimg.com/564x/99/f8/9f/99f89f2935c8a54f6b3a96824fa4d45a.jpg')
     }
 
     .background-image-1 {
-      background-image: url('https://s-media-cache-ak0.pinimg.com/564x/59/cc/ac/59ccac3c6515b7183e9ae7174ba37c64.jpg')
-      /*background-image: url('../backgrounds/bonus/watercolor-lines.jpg');*/
-      /*background-image: url('../backgrounds/seamless/3.png');*/
-
-        /*background-image: url('http://lorempixel.com/400/200/nightlife/');*/
-        /*give the background image a string. change the angular using ng-style*/
+      background-image: url('https://i.pinimg.com/564x/bb/34/32/bb34322867bac537177e88978908da7e.jpg')
     }
 
     .background-image-2 {
-      /*background-image: url('../backgrounds/seamless/4.png');*/
-
-
-      background-image: url('https://s-media-cache-ak0.pinimg.com/564x/fe/87/c9/fe87c9833a547ab3cc2a1bdc1390931c.jpg');
+      background-image: url('https://i.pinimg.com/564x/f8/95/56/f8955650b9cb30f6d6cbba23626e14a4.jpg');
     }
 
     .background-image-3 {
-      background-image: url('https://s-media-cache-ak0.pinimg.com/564x/f6/b7/44/f6b7449232acbe72cf40b5b7cbaf397d.jpg');
+      background-image: url('https://i.pinimg.com/564x/ec/29/0c/ec290c243daddf7f7fb8ee67a8071a9e.jpg');
     }
 
     .background-image-4 {
-      background-image: url('https://s-media-cache-ak0.pinimg.com/564x/57/45/b8/5745b8d2bd9ca8190f246c4b964a59bf.jpg')
+      background-image: url('https://s-media-cache-ak0.pinimg.com/564x/84/7b/27/847b2708e9291e1845a4b9d240f70215.jpg')
     }
 
     .background-image-5 {
-      background-image: url('https://s-media-cache-ak0.pinimg.com/564x/92/da/61/92da6190522d46386a28d62770ad00c7.jpg')
+      background-image: url('https://s-media-cache-ak0.pinimg.com/originals/e7/8c/0a/e78c0a9effa7f22226b34b1d6f29005d.jpg')
     }
 
     .background-image-6 {
-      background-image: url('https://s-media-cache-ak0.pinimg.com/564x/c6/50/57/c650572f05377a33eef64923dadb41d5.jpg')
+      background-image: url('https://s-media-cache-ak0.pinimg.com/originals/51/89/55/518955bf807aad19e58b6b21db328cb8.jpg')
     }
 
     .background-image-7 {
-      background-image: url('https://s-media-cache-ak0.pinimg.com/564x/0b/2b/2c/0b2b2c49b7f0d7ea81a067b4a88b6402.jpg')
+      background-image: url('https://i.pinimg.com/564x/55/4c/8b/554c8bd9a3b1c3b141506c2123ed6827.jpg')
     }
 
 
@@ -264,6 +256,8 @@ html{
       }
 
       .quote-buttons{
-        display: block;
-        margin: 0 auto; 
+        /*float: left;*/
+
+        display: flex;
+        justify-content: space-between;
       }

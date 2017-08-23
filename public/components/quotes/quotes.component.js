@@ -12,6 +12,9 @@
     vm.$onInit = function () {
       $http.get('/api/quotes').then(function (response){
         vm.quotes = response.data
+        vm.quotes.forEach( quote => {
+          quote.viewButtonClicked = false; 
+        })
       })
     }
 
@@ -41,26 +44,30 @@
     vm.getRandomImage = function (){
       return "url('./backgrounds/seamless/3.png')"
 
-      // "{'background-image': 'url(https://s-media-cache-ak0.pinimg.com/564x/49/22/87/49228752cabbef2f1d1e930fe6b51e01.jpg)'}"
+
+    }
+
+    vm.toggleViewComments = function (quote) {
+      quote.viewButtonClicked = !quote.viewButtonClicked
     }
 
 
-      vm.upVote = function (quote) {
-        console.log(quote);
-        let upVoteUrl = '/api/quotes/' + quote.id + '/votes'
-        $http.post(upVoteUrl).then(res => {
-          quote.popularity++
+    vm.upVote = function (quote) {
+      console.log(quote);
+      let upVoteUrl = '/api/quotes/' + quote.id + '/votes'
+      $http.post(upVoteUrl).then(res => {
+        quote.popularity++
+      })
+    }
+
+    vm.downVote = function (quote){
+      let downVoteUrl = '/api/quotes/' + quote.id + '/votes'
+      if(quote.id >= 1){
+        $http.delete(downVoteUrl).then(res =>{
+          quote.popularity--
         })
       }
-
-      vm.downVote = function (quote){
-        let downVoteUrl = '/api/quotes/' + quote.id + '/votes'
-        if(quote.id >= 1){
-          $http.delete(downVoteUrl).then(res =>{
-            quote.popularity--
-          })
-        }
-      }
+    }
   }
 
 })()
