@@ -10,6 +10,7 @@
   /*top: 100%;*/
 }
 
+
 .slider {
 	overflow-y: hidden;
 	max-height: 500px; /* approximate max height */
@@ -21,4 +22,9 @@
 
 .slider.closed {
 	max-height: 0;
+}
+
+.submit-button {
+  position: absolute;
+  right: 220px;
 }
