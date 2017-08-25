@@ -14,11 +14,10 @@
 
 }
 
+.btn{
 
-.frame{
-  border: 10px solid #FFC0B4;
-  padding: 10px;
 }
+
 
 .panel-default{
   position: absolute;
@@ -30,8 +29,15 @@
   text-align: center;
 }
 
+.image {
+   position: relative;
+   width: 100%; /* for IE 6 */
+}
+
 .landing-page-button{
   float: right;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .landing-page-create-quote{
@@ -40,22 +46,26 @@
 }
 
 
-
 .landing-page-sassy h2{
   text-align: center;
   color: #FFC0B4;
+
+}
+
+.module-mid{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  color: white;
+  text-transform: uppercase;
+  margin: 0;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  font-size: 7rem;
+  transform: translate(-50%, -50%);
 }
 
 .sassy-caption-landing-page{
   text-align: right;
   word-wrap: break-word;
-}
-
-.selfie-girls{
-  display: auto;
-  margin-left: auto;
-  margin-right: auto
-  width: 40em;
-  height: 43em;
-  position: absolute;
 }
