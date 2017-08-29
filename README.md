@@ -11,3 +11,34 @@ Match your most recent & favorite photo with our sassy caption. Search through o
 When one of our Sassy Caption users have a creative streak, the user is able to create their own captions for the site. Merely click in "create a quote" fill out the form and submit. That easy. Then watch your quote go viral and be used across the globe. 
 
 ![screenshot of create quote](https://user-images.githubusercontent.com/24262724/29830501-49df07ae-8c97-11e7-9dd2-a00d4e9c107c.png)
+
+
+# Features 
+
+Create Quote: Create a new quote by writing the quote, author and select a category. 
+
+Filter: Able to filter through the categories of Faith, Family, Friendship and Fun. 
+
+Comment on Quote/View Quote/Delete Quote: self explanatory 
+
+
+# Tech
+
+- Node.js
+- PostgreSQL
+- ExpressJS
+- Knex.js
+- Bootstrap
+- Angular  
+- Javascript 
+- CSS 
+- HTML 
+
+# Future Development 
+
+- Re-doing the CSS of the landing page and All Quotes 
+- Adding feature to copy the whole quote (as well as the background)
+- Able to link facebook, instagram & snapchat easily and have them redirect to the sites. 
+
+
+
