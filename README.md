@@ -8,4 +8,4 @@ Match your most recent & favorite photo with our sassy caption. Search through o
 
 When one of our Sassy Caption users have a creative streak, the user is able to create their own captions for the site. Merely click in "create a quote" fill out the form and submit. That easy. Then watch your quote go viral and be used across the globe. 
 
-![screenshot of create quote]https://user-images.githubusercontent.com/24262724/29830501-49df07ae-8c97-11e7-9dd2-a00d4e9c107c.png
+![screenshot of create quote](https://user-images.githubusercontent.com/24262724/29830501-49df07ae-8c97-11e7-9dd2-a00d4e9c107c.png)
