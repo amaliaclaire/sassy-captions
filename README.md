@@ -41,4 +41,11 @@ Comment on Quote/View Quote/Delete Quote: self explanatory
 - Able to link facebook, instagram & snapchat easily and have them redirect to the sites. 
 
 
+# The Project 
+https://sassy-captions.herokuapp.com/
+
+Created By: 
+
+Amalia Fergin: https://github.com/amaliaclaire
+
 
